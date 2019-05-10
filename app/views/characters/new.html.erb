@@ -1,0 +1,23 @@
+<h1>Est</h1>
+
+<%= form_with scope: :character, url: characters_path, local: true do |form| %>
+  <%= form.hidden_field :user_id %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :color_claws %><br>
+    <%= form.select(:color_claws, Character.color_claws.keys.map {|color| [color.titleize,color]}) %>
+  </p>
+
+  <p>
+    <%= form.label :kind %><br>
+    <%= form.select(:kind, Character.kinds.keys.map {|kind| [kind.titleize,kind]}) %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
