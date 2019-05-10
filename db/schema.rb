@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_002638) do
+ActiveRecord::Schema.define(version: 2019_05_10_025833) do
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.integer "color_claws"
+    t.integer "kind"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_characters_on_user_id", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
