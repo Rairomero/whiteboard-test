@@ -1,0 +1,4 @@
+<p>
+  <%= form.label :color_claws %><br>
+  <%= form.select(:color_claws, Character.color_claws.keys.map {|color| [color.titleize,color]}) %>
+</p>

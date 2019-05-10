@@ -3,6 +3,7 @@ class Character < ApplicationRecord
 
     validates_presence_of :name, :if => lambda { |o| o.current_step == "name" }
     validates_presence_of :color_claws, :if => lambda { |o| o.current_step == "color_claws" }
+    validates :user_id, uniqueness: true
 
     enum color_claws: [:gray, :black, :white, :gold, :sand, :silver]
     enum kinds: [:wizard, :sorcerer, :warrior, :knight,

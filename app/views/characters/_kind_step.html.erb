@@ -1,0 +1,4 @@
+<p>
+  <%= form.label :kind %><br>
+  <%= form.select(:kind, Character.kinds.keys.map {|kind| [kind.titleize,kind]}) %>
+</p>
