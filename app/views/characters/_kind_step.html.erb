@@ -1,4 +1,4 @@
 <p>
   <%= form.label :kind %><br>
-  <%= form.select(:kind, Character.kinds.keys.map {|kind| [kind.titleize,kind]}) %>
+  <%= form.collection_radio_buttons :kind, Character.kinds, :first, :first %>
 </p>
