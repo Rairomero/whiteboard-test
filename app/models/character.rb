@@ -6,7 +6,7 @@ class Character < ApplicationRecord
   validates :user_id, uniqueness: true
 
   enum color_claws: [:gray, :black, :white, :gold, :sand, :silver]
-  enum kinds: [:wizard, :sorcerer, :warrior, :knight,
+  enum kind: [:wizard, :sorcerer, :warrior, :knight,
               :hunter, :assassin, :priest, :healer]
 
   def current_step
