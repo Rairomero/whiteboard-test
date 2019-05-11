@@ -1,4 +1,8 @@
+<h6>Select a class for the character</h6>
 <p>
-  <%= form.label :kind %><br>
-  <%= form.collection_radio_buttons :kind, Character.kinds, :first, :first %>
+  <div class="btn-group-toggle" data-toggle="buttons">
+    <%= form.collection_radio_buttons(:kind, Character.kinds, :first, :first) do |r| %>
+      <label class="btn btn-outline-secondary btn-lg btn-block"><%= r.radio_button %><%= r.label %></label>
+    <% end %>
+  </div>
 </p>

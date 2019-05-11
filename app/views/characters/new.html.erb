@@ -1,13 +1,22 @@
-<h1>Est</h1>
 
-<%= form_for @character do |form| %>
-  <% @character.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
-   <% end %>
-  <%= form.hidden_field :user_id %>
-
-  <%= render "#{@character.current_step}_step", form: form %>
- 
-  <p><%= form.submit "Continue" %></p>
-  <p><%= form.submit "Back", :name => "back_button" unless @character.first_step? %></p>
-<% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-8 col-sm-8 col-md-6 col-lg-4 col-xl-3 vh-90 m-0 d-flex flex-column justify-content-center">
+      <h1>Create character</h1>
+      <%= form_for @character do |form| %>
+        <% @character.errors.full_messages.each do |msg| %>
+          <p><%= msg %></p>
+        <% end %>
+        <%= form.hidden_field :user_id %>
+        <%= render "#{@character.current_step}_step", form: form %>
+        <div class="actions float-right">
+          <%= form.submit "Continue", class: "btn btn-outline-primary btn-lg", html: "<span>asdas</span>" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
