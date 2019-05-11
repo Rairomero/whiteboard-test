@@ -1,5 +1,22 @@
-<h1>Character</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-<p><%= @character.name %></p>
-<p><%= @character.color_claws %></p>
-<p><%= @character.kind %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-8 col-sm-8 col-md-6 col-lg-4 col-xl-3 vh-90 m-0 d-flex flex-column justify-content-center">
+      <h1>Character</h1>
+      <ul>
+        <li>
+          <%= @character.name %>
+        </li>
+        <li>
+          <%= @character.color_claws %>
+        </li>
+        <li>
+          <%= @character.kind %>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
