@@ -1,24 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to run the project
 
-Things you may want to cover:
+### Before continuing
 
-* Ruby version
+Be sure the ruby ​​version
+```
+ruby 2.6.1
+```
 
-* System dependencies
+### 1. After clone the project run:
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+### 2. Run migrations for the database setup
+```
+rails db:migrate
+```
 
-* Database initialization
+Using sqlite so no more configuration needed.
 
-* How to run the test suite
+### 3. Run the server
+```
+rails s
+```
+Enjoy!
 
-* Services (job queues, cache servers, search engines, etc.)
+## Run mailcatcher for simulate emails
 
-* Deployment instructions
+### Just run in the console
+```
+mailcatcher
+```
+You will see a message like this:
+```
+Starting MailCatcher
+==> smtp://127.0.0.1:1025
+==> http://127.0.0.1:1080/
+*** MailCatcher runs as a daemon by default. Go to the web interface to quit.
+```
+MailCatcher runs as a daemon by default. Go to http://localhost:1080/ to see the web interface.
 
-* ...
+## Running test
+
+Just run:
+```
+rspec spec
+```
+A coverage page will be generate.
